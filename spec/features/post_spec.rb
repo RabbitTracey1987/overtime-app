@@ -20,8 +20,8 @@ describe 'navigate' do
   	end
 
     it 'has a list of posts' do
-      post1 = FactoryGirl.build_stubbed(:post)
-      post2 = FactoryGirl.build_stubbed(:second_post)
+      posta = FactoryGirl.build_stubbed(:post)
+      postb = FactoryGirl.build_stubbed(:second_post)
       visit posts_path
       expect(page).to have_content(/Rationale|content/)
     end
@@ -32,6 +32,16 @@ describe 'navigate' do
       visit root_path 
       click_link("new_post_from_nav")
       expect(page.status_code).to eq (200)
+    end
+  end
+  
+  describe 'delete' do 
+    it 'can be deleted' do
+      @post = FactoryGirl.create(:post)
+      visit posts_path
+      puts "#{Post.all.map{|a| a.id}}"
+      click_link("delete_post_#{@post.id}_from_index")
+      expect(page.status_code).to eq(200)
     end
   end
 
