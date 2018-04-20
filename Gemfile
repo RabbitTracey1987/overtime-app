@@ -14,6 +14,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'sqlite3'
 gem 'devise', '~> 3.5', '>= 3.5.5'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+gem 'gritter', '~> 1.2'
 
 
 group :development, :test do
