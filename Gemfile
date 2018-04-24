@@ -15,6 +15,8 @@ gem 'sqlite3'
 gem 'devise', '~> 3.5', '>= 3.5.5'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'gritter', '~> 1.2'
+gem 'administrate', '~> 0.10.0'
+gem 'bourbon'
 
 
 group :development, :test do
