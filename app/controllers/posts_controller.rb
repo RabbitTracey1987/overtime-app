@@ -8,9 +8,11 @@ class PostsController < ApplicationController
       @post = Post.new
     end
     def edit 
+      authorize @post
       
     end
     def update
+      authorize @post
       if @post.update(post_params)
         redirect_to @post, notice: 'You post was updated successfully'
       else 
